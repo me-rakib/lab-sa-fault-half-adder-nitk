@@ -4,9 +4,7 @@
 name: Deploy Testing Branch
 on:
   push:
-# mentioning which branch should be used to build the experimnet
-    branches: 
-      - testing
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,7 +30,7 @@ jobs:
         git commit -m "https://virtual-labs.github.io/${{ github.repository }} click on the link to test your code."
     - uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
+        github_token: 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
         force: true
         branch: gh-pages
  # Reference : https://github.com/marketplace/actions/github-push
