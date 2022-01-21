@@ -14,7 +14,7 @@ The half adder is named so due to the fact that two half adders can be employed 
 
 The truth table of the half adder is as shown below. The inputs are designated as x and y, while the S represents the sum output and the C represents the carry output.
 
-<div style="text-align:center"><table>
+<center><table>
                             <thead>
                                 <tr>
                                     <th colspan="2">Input</th>
@@ -54,18 +54,18 @@ The truth table of the half adder is as shown below. The inputs are designated a
                                 </tr>
                             </tbody>
                         </table>
-                        </div>
+                        </center>
 
 The carry output is 0 unless both the inputs are 1. The S(sum) output represents the least significant bit of the addition operation.
 
 The simplified Boolean expressions for the two outputs can be obtained directly from the truth table. They are:
 
-<p style="text-align:center">S = x ⊕ y </p>
+<center>S = x ⊕ y
 
-<p style="text-align:center">C = xy </p>
+C = xy </center>
 
 Thus, the sum is the result of performing an EXOR operation on the input variables, while the carry output is obtained by ANDing the two input variables. We can therefore use an exclusive-OR gate and an AND gate to implement the half adder circuit as shown below.
 
-<p style="text-align:center">
+<center>
 <img src="./images/half-adder.png" style="width: 20rem; margin-left: auto; margin-right: auto;max-width: 100%;
-  height: auto;"></p>
+  height: auto;"></center>
