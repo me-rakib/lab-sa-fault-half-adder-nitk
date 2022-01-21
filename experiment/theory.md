@@ -14,7 +14,7 @@ The half adder is named so due to the fact that two half adders can be employed 
 
 The truth table of the half adder is as shown below. The inputs are designated as x and y, while the S represents the sum output and the C represents the carry output.
 
-<table>
+<p style="text-align:center"><table>
                             <thead>
                                 <tr>
                                     <th colspan="2">Input</th>
@@ -54,6 +54,7 @@ The truth table of the half adder is as shown below. The inputs are designated a
                                 </tr>
                             </tbody>
                         </table>
+                        </p>
 
 The carry output is 0 unless both the inputs are 1. The S(sum) output represents the least significant bit of the addition operation.
 
