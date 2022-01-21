@@ -59,11 +59,12 @@ The carry output is 0 unless both the inputs are 1. The S(sum) output represents
 
 The simplified Boolean expressions for the two outputs can be obtained directly from the truth table. They are:
 
-S = x ⊕ y
+<p style="align:center">S = x ⊕ y </p>
 
-C = xy
+<p style="align:center">C = xy </p>
 
 Thus, the sum is the result of performing an EXOR operation on the input variables, while the carry output is obtained by ANDing the two input variables. We can therefore use an exclusive-OR gate and an AND gate to implement the half adder circuit as shown below.
 
-<img src="./images/half-adder.png" style="width: 15rem; margin-left: auto; margin-right: auto;max-width: 100%;
-  height: auto;">
+<p style="align:center">
+<img src="./images/half-adder.png" style="width: 20rem; margin-left: auto; margin-right: auto;max-width: 100%;
+  height: auto;"></p>
