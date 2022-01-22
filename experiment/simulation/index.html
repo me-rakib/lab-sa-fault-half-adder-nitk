@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="This webpage is for simulator one">
+    <meta name="description" content="SA0 and SA1 simulator">
     <meta name="keywords" content="dds, dds-lab, nitk-dds">
     <meta name="author" content="Group-9">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,21 +16,19 @@
     <title>Ditection of SA Faults on Half Adder</title>
 </head>
 
-<body class="h-screen bg-gray-100">
+<body class="h-screen bg-gray-100 overflow-hidden">
     <!-- ===== Home ===== -->
-    <div class="relative w-full" style="height: 100vh">
-
-        <!-- ===== Input ===== -->
-        <div class="left-4 bg-white absolute shadow-lg rounded-xl"
-            style="width:48%; height: 90%; top: 50%; transform: translateY(-50%);">
-            <div class="h-full font-lora flex flex-col items-center justify-center">
-                <img class="w-3/6" src="./images/ha1.png">
+    <div class="h-full font-lora flex flex-col gap-y-5 md:flex-row md:gap-x-5">
+        <div
+            class="bg-white shadow-lg rounded-xl text-center flex p-4 h-3/6 mt-4 w-11/12 mx-auto md:h-5/6 md:ml-4 md:my-auto">
+            <div class="m-auto">
+                <img class="w-60 mx-auto lg:w-7/12" src="./images/ha1.png">
                 <div class="mt-5">
                     <input type="text" id="x" class="w-10 bg-green-200 text-center rounded-sm" placeholder="x">
                     <input type="text" id="y" class="w-10 bg-green-200 text-center rounded-sm" placeholder="y">
                 </div>
 
-                <div class="text-center my-5">
+                <div class="my-5 md:space-y-2">
                     <input type="text" id="a" class="w-10 bg-red-200 text-center rounded-sm" placeholder="a">
                     <input type="text" id="b" class="w-10 bg-red-200 text-center rounded-sm" placeholder="b">
                     <input type="text" id="c" class="w-10 bg-red-200 text-center rounded-sm" placeholder="c">
@@ -45,35 +43,31 @@
             </div>
         </div>
 
-        <!-- ===== Truth Table ===== -->
-        <div class="overflow-y-auto font-lora bg-white rounded-xl shadow-xl absolute right-4"
-            style="width:48%; height: 90%; top: 50%; transform: translateY(-50%)">
+        <div
+            class="bg-white shadow-lg rounded-xl overflow-y-auto  p-4 h-3/6 mb-4 w-11/12 mx-auto md:h-5/6 md:mr-4 md:my-auto">
+            <p class="text-center font-semibold mb-1">Truth Table</p>
+            <hr class="w-4/5 h-0.5 mx-auto bg-gray-300 mb-3">
+            <table id="section-to-print" class="w-full table border text-center">
+                <tbody id="table-body">
+                    <tr>
+                        <th rowspan="2" class="border px-5 border-gray-400">x y</th>
+                        <th rowspan="2" class="border border-gray-400">Faults</th>
+                        <th colspan="2" class="border border-gray-400">Expected Output</th>
+                        <th colspan="2" class="border border-gray-400">Final Output</th>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400">s</td>
+                        <td class="border border-gray-400">c</td>
+                        <td class="border border-gray-400">s'</td>
+                        <td class="border border-gray-400">c'</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <div class="m-5">
-                <p class="text-center font-semibold mb-1">Truth Table</p>
-                <hr class="w-4/5 h-0.5 mx-auto bg-gray-300 mb-3">
-                <table id="section-to-print" class="w-full table border text-center">
-                    <tbody id="table-body">
-                        <tr>
-                            <th rowspan="2" class="border px-5 border-gray-400">x y</th>
-                            <th rowspan="2" class="border border-gray-400">Faults</th>
-                            <th colspan="2" class="border border-gray-400">Expected Output</th>
-                            <th colspan="2" class="border border-gray-400">Final Output</th>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400">s</td>
-                            <td class="border border-gray-400">c</td>
-                            <td class="border border-gray-400">s</td>
-                            <td class="border border-gray-400">c</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-				<!-- Reset -->
-				<div class="text-center mt-5">
-                    <button id="reset-btn" class="py-1 px-4 rounded-md text-gray-800 font-semibold bg-yellow-400 hover:bg-yellow-300">Reset</button>
-                </div>
-
+            <!-- Reset -->
+            <div class="text-center mt-5">
+                <button id="reset-btn"
+                    class="py-1 px-4 rounded-md text-white font-semibold bg-red-500 hover:bg-red-600">Reset</button>
             </div>
         </div>
     </div>
