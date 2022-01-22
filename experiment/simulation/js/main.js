@@ -225,9 +225,6 @@ checkBtn.addEventListener("click", () => {
   let faults = getFault();
   const getAllFault = getAllFaults(faults);
 
-  const sum = getFaultSum(x, y, faults);
-  const carry = getFaultCarry(x, y, faults);
-
   let flt = "";
   let fRes = {};
   if (faults.length == 0) {
@@ -240,16 +237,18 @@ checkBtn.addEventListener("click", () => {
     flt = getAllFault;
   }
 
-  if (checkNum(x) && checkNum(x)) {
+  if (checkNum(x) && checkNum(y)) {
     createRow(x, y, flt, getSum(x, y), getCarry(x, y), fRes);
+  } else {
+    alert("Please fill the input box with correct value!");
   }
 });
 
 resetBtn.addEventListener("click", () => {
-    let len = tableBody.rows.length;
-    if (len > 2) {
-      for (let i = 2; i < len; i++) {
-        tableBody.deleteRow(2);
-      }
+  let len = tableBody.rows.length;
+  if (len > 2) {
+    for (let i = 2; i < len; i++) {
+      tableBody.deleteRow(2);
     }
-  });
+  }
+});
