@@ -8,5 +8,6 @@ Pearson Education, 12th Edn., 2017.
 * https://www.geeksforgeeks.org/half-adder-in-digital-logic/
 * https://www.elprocus.com/half-adder-and-full-adder/
 
+
 This experiment is developed by **Dr. Biswajit R. Bhowmik** and his UG students- **Chirag R, Md Rakib Hasan, Attada Ramprasad, Hari Chetan Kurapati, and Aniketh Narayan Bellala**, Department of Computer Science and Engineering, National Institute of Technology Karnataka.
 
