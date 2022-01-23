@@ -1,10 +1,11 @@
 ### SA Fault
 
-Fault is a logic level abstraction of a physical defect. It is used to describe the change in the logic function of a device caused by the defect. Fault abstractions reduce the number of conditions that must be considered in deriving tests.
+A fault is, as the name suggests, a defect in the circuit. It implies something is wrong with the circuit. More often than not, a fault in a circuit is not good news.
 
-Logical faults are used to represent physical faults. They simplify the fault analysis process and reduces the number of faults.
+But sometimes, the developers induce a fault at some point in the circuit. This helps in ensuring that there is no fault at any other possible points. In this way, faults help us while designing a circuit.
 
-A stuck-at fault (SAF) is a logic-level fault that mimics a manufacturing defect on a digital circuit. An SAF is of two types- stuck-at-0 (SA0) and stuck-at-1 (SA1) faults. Individual bit or signal on a wire of a logic gate is assumed to be stuck at Logical '1' or '0' if that bit or the signal is converted to logic-1 or logic-0 irrespective of its previous or assigned value.
+A stuck-at fault (SAF) occurs when the value of some wire is stuck on a particular value. Irrespective of the value given to the wire, it is always at either logical 1 or logical 0. Stuck-at faults are of two types – stuck-at-1 (SA1) and stuck-at-0 (SA0).
+Stuck-at-1 fault occurs when the value of a particular wire is always at logical 1 irrespective of the value fed to the wire. If it is always at logical 0, then it is called stuck-at-0 fault.
 
 ### Half-Adder
 
@@ -14,47 +15,49 @@ The half adder is named so due to the fact that two half adders can be employed 
 
 The truth table of the half adder is as shown below. The inputs are designated as x and y, while the S represents the sum output and the C represents the carry output.
 
-<center><table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Input</th>
-                                    <th colspan="2">Output</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>A</td>
-                                    <td>B</td>
-                                    <td>S</td>
-                                    <td>C</td>
-                                </tr>
-                                <tr>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </center>
+<center>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Input</th>
+                <th colspan="2">Output</th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                    <td>B</td>
+                    <td>S</td>
+                    <td>C</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+    <figcaption> Fig - 1: Half Adder Truth Table</figcaption>
+</center>
 
 The carry output is 0 unless both the inputs are 1. The S(sum) output represents the least significant bit of the addition operation.
 
@@ -68,4 +71,6 @@ Thus, the sum is the result of performing an EXOR operation on the input variabl
 
 <center>
 <img src="./images/half-adder.png" style="width: 20rem; margin-left: auto; margin-right: auto;max-width: 100%;
-  height: auto;"></center>
+  height: auto;">
+<figcaption> Fig - 2: Half Adder Circuit</figcaption>
+</center>
