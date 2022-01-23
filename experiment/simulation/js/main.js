@@ -52,7 +52,7 @@ const createRow = (x, y, fault, exps, expc, fRes) => {
 
 // ===== Validate Input =====
 const checkNum = (num) => {
-  if (!isNaN(num) && num != "" && (num == 1) | (num == 0)) {
+  if (!isNaN(num) && num != "" && num.length <= 1 && (num == 1) | (num == 0)) {
     return true;
   } else {
     return false;
@@ -90,65 +90,75 @@ const zeroOrOne = (v) => {
   let r;
   if (v.value == 0) {
     r = 0;
-  } else {
+  } else if (v.value == 1) {
     r = 1;
   }
-  v.value = "";
   return r;
 };
 
-// ===== Faults =====
+// get input
+const fetchFault = (char, from) => {
+  let fault = {};
+  fault.f = char;
+  fault.v = zeroOrOne(from);
+  return fault;
+};
+
+// ===== Get Faults =====
 const getFault = () => {
   let faults = [];
+  let status = true;
   if (checkNum(getA.value)) {
-    let fault = {};
-    fault.f = "a";
-    fault.v = zeroOrOne(getA);
-    faults.push(fault);
+    faults.push(fetchFault("a", getA));
+  } else if (getA.value != "") {
+    status = false;
   }
   if (checkNum(getB.value)) {
-    let fault = {};
-    fault.f = "b";
-    fault.v = zeroOrOne(getB);
-    faults.push(fault);
+    faults.push(fetchFault("b", getB));
+  } else if (getB.value != "") {
+    status = false;
   }
   if (checkNum(getC.value)) {
-    let fault = {};
-    fault.f = "c";
-    fault.v = zeroOrOne(getC);
-    faults.push(fault);
+    faults.push(fetchFault("c", getC));
+  } else if (getC.value != "") {
+    status = false;
   }
   if (checkNum(getD.value)) {
-    let fault = {};
-    fault.f = "d";
-    fault.v = zeroOrOne(getD);
-    faults.push(fault);
+    faults.push(fetchFault("d", getD));
+  } else if (getD.value != "") {
+    status = false;
   }
   if (checkNum(getE.value)) {
-    let fault = {};
-    fault.f = "e";
-    fault.v = zeroOrOne(getE);
-    faults.push(fault);
+    faults.push(fetchFault("e", getE));
+  } else if (getE.value != "") {
+    status = false;
   }
   if (checkNum(getF.value)) {
-    let fault = {};
-    fault.f = "f";
-    fault.v = zeroOrOne(getF);
-    faults.push(fault);
+    faults.push(fetchFault("f", getF));
+  } else if (getF.value != "") {
+    status = false;
   }
   if (checkNum(getG.value)) {
-    let fault = {};
-    fault.f = "g";
-    fault.v = zeroOrOne(getG);
-    faults.push(fault);
+    faults.push(fetchFault("g", getG));
+  } else if (getG.value != "") {
+    status = false;
   }
   if (checkNum(getH.value)) {
-    let fault = {};
-    fault.f = "h";
-    fault.v = zeroOrOne(getH);
-    faults.push(fault);
+    faults.push(fetchFault("h", getH));
+  } else if (getH.value != "") {
+    status = false;
   }
-  return faults;
+
+  getA.value = "";
+  getB.value = "";
+  getC.value = "";
+  getD.value = "";
+  getE.value = "";
+  getF.value = "";
+  getG.value = "";
+  getH.value = "";
+
+  return [status, faults];
 };
 
 // ===== Fault Res =====
@@ -223,27 +233,28 @@ checkBtn.addEventListener("click", () => {
   getY.value = "";
 
   let faults = getFault();
-  const getAllFault = getAllFaults(faults);
+  const getAllFault = getAllFaults(faults[1]);
 
   let flt = "";
   let fRes = {};
-  if (faults.length == 0) {
-    flt = "N/A";
+  if (faults[1].length == 0) {
+    flt = "NA";
     fRes.s = getSum(x, y);
     fRes.c = getCarry(x, y);
   } else {
-    fRes.s = getFaultSum(x, y, faults);
-    fRes.c = getFaultCarry(x, y, faults);
+    fRes.s = getFaultSum(x, y, faults[1]);
+    fRes.c = getFaultCarry(x, y, faults[1]);
     flt = getAllFault;
   }
 
-  if (checkNum(x) && checkNum(y)) {
+  if (checkNum(x) && checkNum(y) && faults[0]) {
     createRow(x, y, flt, getSum(x, y), getCarry(x, y), fRes);
   } else {
-    alert("Please fill the input box with correct value!");
+    alert("Input value can only be 0 or 1");
   }
 });
 
+// ===== Reset Table =====
 resetBtn.addEventListener("click", () => {
   let len = tableBody.rows.length;
   if (len > 2) {
