@@ -1,13 +1,3 @@
-### SA Fault
-
-A fault is, as the name suggests, a defect in the circuit. It implies something is wrong with the circuit. More often than not, a fault in a circuit is not good news.
-
-But sometimes, the developers induce a fault at some point in the circuit. This helps in ensuring that there is no fault at any other possible points. In this way, faults help us while designing a circuit.
-
-A stuck-at fault (SAF) occurs when the value of some wire is stuck on a particular value. Irrespective of the value given to the wire, it is always at either logical 1 or logical 0. Stuck-at faults are of two types – stuck-at-1 (SA1) and stuck-at-0 (SA0).
-
-Stuck-at-1 fault occurs when the value of a particular wire is always at logical 1 irrespective of the value fed to the wire. If it is always at logical 0, then it is called stuck-at-0 fault.
-
 ### Half-Adder
 
 A half-adder is a combinational circuit that is used to add two binary digits. This simple addition consists of four possible elementary operations, namely, 0+0=0, 0+1=1, 1+0=1 and 1+1=10. The first three operations produce a sum that is one bit long, but when both augend and addend bits are equal to logical 1, the binary sum consists of two digits. The higher significant bit of this result is called a carry. When the augend and addend numbers contain more significant digits, the carry obtained from the addition of two bits is added to the next higher-order pair of significant bits.
@@ -75,3 +65,13 @@ Thus, the sum is the result of performing an EXOR operation on the input variabl
   height: auto;">
 <figcaption style="font-size: 14px;margin-top: 5px;"> Fig - 2: Half Adder Circuit</figcaption>
 </center>
+
+### SA Fault
+
+A fault is, as the name suggests, a defect in the circuit. It implies something is wrong with the circuit. More often than not, a fault in a circuit is not good news.
+
+But sometimes, the developers induce a fault at some point in the circuit. This helps in ensuring that there is no fault at any other possible points. In this way, faults help us while designing a circuit.
+
+A stuck-at fault (SAF) occurs when the value of some wire is stuck on a particular value. Irrespective of the value given to the wire, it is always at either logical 1 or logical 0. Stuck-at faults are of two types – stuck-at-1 (SA1) and stuck-at-0 (SA0).
+
+Stuck-at-1 fault occurs when the value of a particular wire is always at logical 1 irrespective of the value fed to the wire. If it is always at logical 0, then it is called stuck-at-0 fault.

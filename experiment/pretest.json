@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is the role of half adder in the parts of a proccesor?",
+      "question": "What is the role of half adder in the parts of a processor?",
       "answers": {
         "a": "Increment and decrement operators ",
         "b": "Calculate addresses",
