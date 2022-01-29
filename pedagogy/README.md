@@ -5,13 +5,13 @@
 
 
 <br>
-<b> Experiment : Name of the experiment	 <a name="top"></a> <br>
+<b> Experiment : Detection of both SA0 and SA1 faults on a Half Adder circuit implemented by AND and XOR gates<a name="top"></a> <br>
 </p>
 
-<b>Discipline | Fill your discipline name here <b> 
+<b>Discipline | Computer Science and Engineering <b> 
 :--|:--|
-<b> Lab | Fill your lab name here<b> 
-<b> Experiment|  Fill your experiment name here   <b> 
+<b> Lab | CS203- Design of Digital System Lab<b> 
+<b> Experiment|  Detection of both SA0 and SA1 faults on a Half Adder circuit implemented by AND and XOR gates  <b> 
 
 
 <h4> [1. Focus Area](#LO)

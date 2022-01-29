@@ -76,7 +76,7 @@ A stuck-at fault (SAF) occurs when the value of some wire is stuck on a particul
 
 Stuck-at-1 fault occurs when the value of a particular wire is always at logical 1 irrespective of the value fed to the wire. If it is always at logical 0, then it is called stuck-at-0 fault.
 
-For example if there is SA1 fault in position a, then output will be as shown in table - 2:
+For example if there is SA1 fault in position a, then output will be as shown in table - 2. Here value marked with red background indicated as faulty output.
 
 <center>
 <img src="./images/ha1.png" style="width: 20rem; margin-left: auto; margin-right: auto;max-width: 100%;
