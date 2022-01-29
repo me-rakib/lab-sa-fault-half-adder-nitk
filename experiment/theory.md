@@ -4,7 +4,7 @@ A half-adder is a combinational circuit that is used to add two binary digits. T
 
 The half adder is named so due to the fact that two half adders can be employed to implement a full adder. It needs two input and two output bits. The input variables designate the augend and addend bits, while the output bits produce the sum and the carry.
 
-The truth table of the half adder is as shown below. The inputs are designated as x and y, while the S represents the sum output and the C represents the carry output.
+The truth table of the half adder is shown in table - 1. The inputs are designated as x and y, while the S represents the sum output and the C represents the carry output.
 
 <center>
     <table>
@@ -47,7 +47,7 @@ The truth table of the half adder is as shown below. The inputs are designated a
             </tr>
         </tbody>
     </table>
-    <figcaption style="font-size: 14px;margin-top: -8px;margin-bottom: 8px;"> Fig - 1: Half Adder Truth Table</figcaption>
+    <figcaption style="font-size: 14px;margin-top: -8px;margin-bottom: 8px;"> Table - 1: Half Adder Truth Table</figcaption>
 </center>
 
 The carry output is 0 unless both the inputs are 1. The S(sum) output represents the least significant bit of the addition operation.
@@ -58,12 +58,12 @@ The simplified Boolean expressions for the two outputs can be obtained directly 
 
 C = xy </center>
 
-Thus, the sum is the result of performing an EXOR operation on the input variables, while the carry output is obtained by ANDing the two input variables. We can therefore use an exclusive-OR gate and an AND gate to implement the half adder circuit as shown below.
+Thus, the sum is the result of performing an EXOR operation on the input variables, while the carry output is obtained by ANDing the two input variables. We can therefore use an exclusive-OR gate and an AND gate to implement the half adder circuit as shown on figure - 1.
 
 <center>
 <img src="./images/half-adder.png" style="width: 20rem; margin-left: auto; margin-right: auto;max-width: 100%;
   height: auto;">
-<figcaption style="font-size: 14px;margin-top: 5px;"> Fig - 2: Half Adder Circuit</figcaption>
+<figcaption style="font-size: 14px;margin-top: 5px;"> Figure - 1: Half Adder Circuit</figcaption>
 </center>
 
 ### SA Fault
@@ -75,3 +75,66 @@ But sometimes, the developers induce a fault at some point in the circuit. This 
 A stuck-at fault (SAF) occurs when the value of some wire is stuck on a particular value. Irrespective of the value given to the wire, it is always at either logical 1 or logical 0. Stuck-at faults are of two types – stuck-at-1 (SA1) and stuck-at-0 (SA0).
 
 Stuck-at-1 fault occurs when the value of a particular wire is always at logical 1 irrespective of the value fed to the wire. If it is always at logical 0, then it is called stuck-at-0 fault.
+
+For example if there is SA1 fault in position a, then output will be as shown in table - 2:
+
+<center>
+<img src="./images/ha1.png" style="width: 20rem; margin-left: auto; margin-right: auto;max-width: 100%;
+  height: auto;">
+<figcaption style="font-size: 14px;margin-top: 5px;"> Figure - 2: Half Adder Circuit with faults positions</figcaption>
+</center>
+
+<center>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Input</th>
+                <th colspan="2">Expected Output</th>
+                <th colspan="2">Final Output</th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>S</td>
+                <td>C</td>
+                <td>S'</td>
+                <td>C'</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+    <figcaption style="font-size: 14px;margin-top: -8px;margin-bottom: 8px;"> Table - 2: Truth Table with SA1 fault</figcaption>
+</center>
