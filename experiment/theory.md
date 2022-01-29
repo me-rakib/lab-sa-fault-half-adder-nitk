@@ -84,7 +84,7 @@ For example if there is SA1 fault in position a, then output will be as shown in
 <figcaption style="font-size: 14px;margin-top: 5px;"> Figure - 2: Half Adder Circuit with faults positions</figcaption>
 </center>
 
-
+##
 <center>
     <table>
         <thead>
@@ -108,7 +108,7 @@ For example if there is SA1 fault in position a, then output will be as shown in
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
-                <td bgcolor = "rgba(252, 165, 165, 1)">1</td>
+                <td bgcolor = "#FCA5A5">1</td>
                 <td>0</td>
             </tr>
             <tr>
@@ -116,8 +116,8 @@ For example if there is SA1 fault in position a, then output will be as shown in
                 <td>1</td>
                 <td>1</td>
                 <td>0</td>
-                <td bgcolor = "rgba(252, 165, 165, 1)">0</td>
-                <td bgcolor = "rgba(252, 165, 165, 1)">1</td>
+                <td bgcolor = "#FCA5A5">0</td>
+                <td bgcolor = "#FCA5A5">1</td>
             </tr>
             <tr>
                 <td>1</td>
