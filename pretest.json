@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the role of half adder in the parts of a processor?",
+    "answers": {
+      "a": "Increment and decrement operators ",
+      "b": "Calculate addresses",
+      "c": "Calculate table indices",
+      "d": "All of the above"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "question": "Which of the following options are false with respect to half adders?",
+    "answers": {
+      "a": "Can accept a carry bit from a previous stage",
+      "b": "Can accept a carry bit from a present stage",
+      "c": "Can accept a carry bit from a next stage",
+      "d": "Can accept a carry bit from the following stages"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "question": "How many digits can the half adder circuit add at a time?",
+    "answers": {
+      "a": "3",
+      "b": "0",
+      "c": "2",
+      "d": "1"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Total number of inputs and outputs in a half adder are",
+    "answers": {
+      "a": "2, 2",
+      "b": "3, 1",
+      "c": "4, 0",
+      "d": "2, 1"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "question": "How many half adders are used to design a full adder?",
+    "answers": {
+      "a": "1",
+      "b": "3",
+      "c": "4",
+      "d": "2"
+    },
+    "correctAnswer": "b"
+  }
+]

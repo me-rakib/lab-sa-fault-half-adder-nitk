@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Which of the following are single-stuck at faults?",
+    "answers": {
+      "a": "SA0",
+      "b": "SA1",
+      "c": "Both A and B",
+      "d": "None of the Above"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "question": "How many AND, OR and EXOR gates are required for the configuration of half adder?",
+    "answers": {
+      "a": "1, 1, 0",
+      "b": "1, 2, 0",
+      "c": "0, 1, 2",
+      "d": "1, 0, 1"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "question": "If A and B are the inputs of a half adder, the sum and carry are given by",
+    "answers": {
+      "a": "A NAND B, A OR B",
+      "b": "A OR B, A NAND B",
+      "c": "A Ex-OR B, A AND B",
+      "d": "A AND B, A XOR B"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "question": "Total number of possible faults in a half adder is __________",
+    "answers": {
+      "a": "6",
+      "b": "9",
+      "c": "7",
+      "d": "8"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "question": "What are the outputs(sum,carry) when the inputs are SA0?",
+    "answers": {
+      "a": "0, 0",
+      "b": "0, 1",
+      "c": "1, 0",
+      "d": "1, 1"
+    },
+    "correctAnswer": "a"
+  }
+]
